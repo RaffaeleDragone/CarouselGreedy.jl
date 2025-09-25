@@ -83,7 +83,7 @@ end
 
 function greedy_minimize(solver::CarouselGreedySolver)
     solver.problem_type = :MIN
-    solver.solution = []
+    empty!(solver.solution)
     greedy = _construction_phase(solver)
     solver.greedy_solution = copy(greedy)
     return greedy
@@ -91,6 +91,7 @@ end
 
 function greedy_maximize(solver::CarouselGreedySolver)
     solver.problem_type = :MIN
+    empty!(solver.solution)
     solver.solution = _construction_phase(solver)
     solver.problem_type = :MAX
     greedy = _construction_phase(solver)
