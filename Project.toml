@@ -1,0 +1,7 @@
+name = "CarouselGreedy"
+uuid = "100727de-7a56-4b5d-9379-46eb10e23cf1"
+version = "0.1.0"
+authors = ["Raffaele Dragone <raffaele.dragone@edu.unige.it>"]
+
+[compat]
+julia = "1.9"
