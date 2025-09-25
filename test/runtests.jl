@@ -1,8 +1,11 @@
 using Test
 using CarouselGreedy
 
-@testset "CarouselGreedy basic tests" begin
-    solver = CarouselGreedySolver((s,sol)->length(sol) >= 2, (s,sol,c)->rand())
+@testset "Basic tests for CarouselGreedy" begin
+    solver = CarouselGreedySolver(
+        (s, sol) -> length(sol) >= 2, 
+        (s, sol, c) -> rand()
+    )
     solution = minimize(solver)
-    @test length(solution) >= 0   # test banale per vedere se gira
+    @test isa(solution, Vector)
 end
